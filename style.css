@@ -1,0 +1,34 @@
+body {
+  background-color: #8fd0ff;
+  color:black;
+  margin-left: 20%;
+  margin-right: 10%;
+  font-family: "Lucida Console", Monaco, monospace;
+}
+
+.header{
+  font-size: 40px;
+  font-variant: small-caps;
+}
+
+.content{
+  font-size: 20px;
+}
+
+.indent {
+  margin-left: 20px;
+}
+
+a, a.hover, a.visited {
+  text-decoration: none;
+  color: #2200ff;
+}
+
+h1, h2, h3 {
+  font-variant: small-caps;
+}
+
+.sc {
+  font-variant: small-caps;
+  font-weight: bold;
+}

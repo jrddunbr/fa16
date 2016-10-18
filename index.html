@@ -1,0 +1,132 @@
+<!DOCTYPE HTML5>
+<!-- Last edited Oct 10, 2016. Expect updates in about a month or two -->
+<html>
+<head>
+  <title>
+    Jared's Site of Horrors! F'16
+  </title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta name=viewport content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div class="header">
+    Jared Dunbar - Fall 2016
+    <br/>
+    Class of 2019
+    <br/>
+    MP 251, 3 Credits
+  </div>
+  <div class="content">
+    <h2>
+      COSI Stuff
+    </h2>
+    <div class="indent">
+      <p>
+        I've done some mostly basic stuff in COSI.
+      </p>
+      <p>
+        As always, I help to keep COSI clean. I made sure that the room was spotless when we had our open house in late September. This included leading a team of <a href="http://www.clarkson.edu/projects/cosi/fa2016/students/northug">Graham</a> <!-- ikr? Graham vacumed the ENTIRE floor -->, Hunter, Abby, and myself to clean every inch of COSI, including vacuming the floor, sanitzing all keyboards, mice, and desks, cleaning dust from behind monitors, wiping down Turtlebots, organizing things into cubbies and their respective locations, cleaning around the 3D printer, and wiping down the center table until it shined clean.
+      </p>
+      <p>
+        I also help a little with CS141 students when they need help.
+      </p>
+      <p>
+        I also intend to help with the IgniteCS project that we were just funded <b>$10k</b> from Google!
+    </div>
+    <h2>
+      Server Room
+    </h2>
+    <div class="indent">
+      <p>
+        As usual, I'm pretty involved in the server room. I discovered this semester while compiling the services emergency contacts list that I have the most services. That took me by suprise, but I realize that I tend to suck up projects. I do a lot of general maintence as well. I'm generally a pretty knowledgable go-to regarding many services.
+      </p>
+      <h3>
+        Networking Stuff
+      </h3>
+      <div class="indent">
+        <p>
+          I <a href="http://docs.cosi.clarkson.edu/wiki/Network_Setup">documented all of our networking</a> on the managed switches out of necessity, and discovered that our 48 port ITL switch was about to die. At a meeting, we decided to buy one new 48 port switch so that the ITL switch can be replaced, and was replaced without issue.
+        </p>
+        <p>
+          When we changed over to the new 48 port switch, some things changed - we removed SW1 from between Ziltoid and SWM1, and removed another ITL switch entirely (which was being used for backup networking as the old switch died)
+        </p>
+        <p>
+          Ziltoid was implemented for the servers by Bobby, and I helped configure the managed switches with STP for live-failover so that when one link to Ziltoid dies, another shall take its place, and if Ziltoid dies, we can still communicate between SWM2 and SWM3.
+        </p>
+        <p>
+          I also configured what was SW4 and thus SWM4 came to be. It's 10 years old, but it will continue to serve COSI for the near future.
+        </p>
+      </div>
+      <h3>
+        Hydra
+      </h3>
+      <p class="indent">
+        <a href="http://docs.cosi.clarkson.edu/wiki/Hydra">Hydra</a><!-- notice the nice colors! --> is our new 32 core, 64GB RAM VM host.
+        <br/>
+        My job, along with <a href="http://www.clarkson.edu/projects/cosi/fa2016/students/kimbalac">Baha</a>, was to put together this machine and to install the software. Baha specced<!-- yes, that is a word --> out the hardware late last semester, and the parts arrived over the summer. On the first weekend, we created Hydra. Baha assembled the parts, and then I installed the software, backed up the VM's, and then did the transition from Felix to Hydra. I handed off Felix to <a href="http://www.clarkson.edu/projects/cosi/fa2016/students/newmanre" >Bobby</a>, who will now be running Androbattery natively on hardware, since it really put a toll on Felix as a VM, eating most of the ram and all of the CPU much of the time, and the image would not resize properly without some difficult tweaking.
+      </p>
+      <p class="indent">
+        It runs about 10 services currently, including a hodge podge of pretty much every service COSI has to offer.
+      </p>
+      <h3>
+        Other Services
+      </h3>
+      <p class="indent">
+        Here's a full service list with a small blurb about what's up with it:
+      </p>
+      <ul class="indent">
+        <li>
+          <a class="sc" href="http://stat.cosi.clarkson.edu">Stat</a> - See below (wait!)
+        </li>
+        <li>
+          <a class="sc" href="http://docs.cosi.clarkson.edu/wiki/hydra">Hydra</a> - See above
+        </li>
+        <li>
+          <a class="sc" href="http://docs.cosi.clarkson.edu/wiki/bennu">Bennu</a> - Nothing new to report except for ridiculous uptime - it's a perfectly funcitoning VM host
+        </li>
+        <li>
+          <a class="sc" href="http://docs.cosi.clarkson.edu/wiki/comm">Comm</a> - After rebuilding Comm last semester, more and more people have been using this service to communicate via Mumble over long distances.
+        </li>
+        <li>
+          <a class="sc" href="https://gitlab.cosi.clarkson.edu">GitLab</a> - This service constantly requires attention and is most likely the seond hardest to maintain after Talos due to it's unique integration with AD and just the nature of GitLab. Plans are to move it to what was Distance
+        </li>
+        <li>
+          <span class="sc">hwiki</span> - What happens in Canada stays in Canada
+        </li>
+        <li>
+          <span class="sc">DDC-Router</span> - Bobby and Graham set up PXE for the DDC.
+        </li>
+        <li>
+          <a class="sc" href="http://docs.cosi.clarkson.edu/wiki/talos">Talos</a> - I'm still learning about Talos from GRM and how it works
+        </li>
+        <li>
+          <span class="sc">Switches</span> - I've been configuring them to be <a href="http://stat.cosi.clarkson.edu/cacti">accesible from Management</a>, and throttling internal services when needed. Also, <a href="http://docs.cosi.clarkson.edu/wiki/Network_Setup">documenting a lot about the network configuration</a> Many things related to the firewall also touched these switches, including the active failover from SWM2 to SWM3 if Ziltoid breaks. Also, replaced SW6 and set up SWM4
+        </li>
+      </ul>
+    </div>
+    <h2>
+      Open Source Projects
+    </h2>
+    <div class="indent">
+      <h3>
+        <a href="http://stat.cosi.clarkson.edu">Management 2.0</a>
+      </h3>
+      <div class="indent">
+        <p>
+          Management 1.0 was superceded by Management 2.0 in the early fall. I plan to go up two more minor versions, inplementing both sensors and a new web interface which uses client side scripting. I also set a cname of stat.cosi.clarkson.edu so that it's quicker to access, thus the nickname Stat.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <!-- whitespace at the bottom for readability -->
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+  </div>
+</body>
+</html>
