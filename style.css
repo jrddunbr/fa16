@@ -1,5 +1,5 @@
 body {
-  background-color: #8fd0ff;
+  background-color: #8fc0ff;
   color:black;
   margin-left: 20%;
   margin-right: 10%;
@@ -21,7 +21,7 @@ body {
 
 a, a.hover, a.visited {
   text-decoration: none;
-  color: #2200ff;
+  color: #002266;
 }
 
 h1, h2, h3 {
